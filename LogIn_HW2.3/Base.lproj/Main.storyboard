@@ -36,11 +36,14 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVI-jL-cv0">
                                         <rect key="frame" x="0.0" y="103" width="260" height="42"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="G9N-L2-zgP"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="G9N-L2-zgP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Log In"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fk3-nZ-cvN"/>
                                         </connections>
@@ -105,7 +108,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhX-Ob-56C">
-                                <rect key="frame" x="119" y="438" width="82" height="42"/>
+                                <rect key="frame" x="119" y="438" width="100" height="42"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="wuy-6I-akj"/>
                                 </constraints>
@@ -136,12 +140,13 @@
                             <constraint firstItem="zhX-Ob-56C" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JiL-xl-qD5" secondAttribute="bottom" constant="123" id="cQ1-iD-kjd"/>
                             <constraint firstItem="JiL-xl-qD5" firstAttribute="leading" secondItem="miP-QF-jgO" secondAttribute="leading" constant="104" id="dAc-f8-QOk"/>
                             <constraint firstItem="Wyq-dl-drD" firstAttribute="centerX" secondItem="v6h-eC-8Jt" secondAttribute="centerX" id="eF7-wa-6S6"/>
-                            <constraint firstItem="miP-QF-jgO" firstAttribute="trailing" secondItem="zhX-Ob-56C" secondAttribute="trailing" constant="119" id="fOx-PH-q0g"/>
+                            <constraint firstItem="miP-QF-jgO" firstAttribute="trailing" secondItem="zhX-Ob-56C" secondAttribute="trailing" constant="101" id="fOx-PH-q0g"/>
                             <constraint firstItem="JiL-xl-qD5" firstAttribute="top" secondItem="Wyq-dl-drD" secondAttribute="bottom" constant="18" id="xHS-l3-yW3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Bg-Wk-xV2"/>
                     <connections>
+                        <outlet property="logOutButton" destination="zhX-Ob-56C" id="XWJ-dg-Q5G"/>
                         <outlet property="userNameLabel" destination="Wyq-dl-drD" id="vUG-If-upa"/>
                     </connections>
                 </viewController>
@@ -154,6 +159,9 @@
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

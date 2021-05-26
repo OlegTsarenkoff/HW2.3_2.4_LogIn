@@ -10,12 +10,16 @@ import UIKit
 class SecondViewController: UIViewController {
     
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var logOutButton: UIButton!
+    
     var userName: String?
     let gradientLayer = CAGradientLayer()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logOutButton.layer.cornerRadius = 20
         
         guard let userName = self.userName else { return }
         userNameLabel.text = "Welcome, \(userName)!"

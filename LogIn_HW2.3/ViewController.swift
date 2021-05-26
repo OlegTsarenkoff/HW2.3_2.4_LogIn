@@ -27,8 +27,18 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    override func viewDidLoad() {
+        logInButton.layer.cornerRadius = 20
+    }
+    
     @IBAction func loginTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "detailSegue", sender: nil)
+        guard userNameTF.text?.isEmpty == false && passwordTF.text?.isEmpty == false else { return }
+        
+        for i in 0..<loginAndPassword.count {
+            if userNameTF.text == loginAndPassword[i].username && passwordTF.text == loginAndPassword[i].password {
+                performSegue(withIdentifier: "detailSegue", sender: nil)
+            }
+        }
     }
     
     @IBAction func forgotUserNameTapped(_ sender: Any) {
@@ -46,8 +56,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
-        userNameTF.text = ""
-        passwordTF.text = ""
+        userNameTF.text = nil
+        passwordTF.text = nil
     }
     
 }
