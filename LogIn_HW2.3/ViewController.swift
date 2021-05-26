@@ -7,6 +7,9 @@
 
 import UIKit
 
+private var loginAndPassword = [(username: "User", password: "Password"),
+                                (username: "Admin", password: "Admin")]
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var userNameTF: UITextField!
@@ -29,9 +32,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Oops!", message: "Your name is User \u{1F609}", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func forgotPasswordTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Oops!", message: "Your password is Password \u{1F60B}", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
