@@ -7,19 +7,16 @@
 
 import UIKit
 
-private var loginAndPassword = [(username: "User", password: "Password"),
-                                (username: "Admin", password: "Admin")]
-
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
-    @IBOutlet weak var userNameTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var logInButton: UIButton!
-    @IBOutlet weak var forgotNameButton: UIButton!
-    @IBOutlet weak var forgotPassButton: UIButton!
+    @IBOutlet var userNameTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
+    @IBOutlet var logInButton: UIButton!
+    
+    private var loginAndPassword = [(username: "User", password: "Password")]
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let dvc = segue.destination as? SecondViewController  else { return }
+        guard let dvc = segue.destination as? WelcomeViewController  else { return }
         dvc.userName = userNameTF.text
     }
     

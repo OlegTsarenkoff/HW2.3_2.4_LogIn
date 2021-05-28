@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LogIn_HW2_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LogIn_HW2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7Qr-nE-qsx">
-                                <rect key="frame" x="30" y="190" width="260" height="188"/>
+                                <rect key="frame" x="30" y="158" width="260" height="188"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Dg-1K-ED3" userLabel="Field Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="88"/>
@@ -37,15 +37,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVI-jL-cv0">
                                         <rect key="frame" x="0.0" y="103" width="260" height="42"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="G9N-L2-zgP"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fk3-nZ-cvN"/>
+                                            <segue destination="wBd-7w-LaH" kind="presentation" modalPresentationStyle="fullScreen" id="aBi-tw-1bx"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pS1-Wf-RKu" userLabel="Forget Stack View">
@@ -76,43 +74,37 @@
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Qr-nE-qsx" secondAttribute="trailing" constant="30" id="FcQ-Ao-79m"/>
-                            <constraint firstItem="7Qr-nE-qsx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="djC-eB-duJ"/>
+                            <constraint firstItem="7Qr-nE-qsx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-32" id="djC-eB-duJ"/>
                             <constraint firstItem="7Qr-nE-qsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xZr-PS-XAq"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="forgotNameButton" destination="JHE-n1-im3" id="dUG-1A-eYa"/>
-                        <outlet property="forgotPassButton" destination="FBm-dD-2Sv" id="j2g-mE-McZ"/>
                         <outlet property="logInButton" destination="kVI-jL-cv0" id="uWD-aq-Q3o"/>
                         <outlet property="passwordTF" destination="k28-XH-Rcq" id="nWB-qD-dkJ"/>
                         <outlet property="userNameTF" destination="8at-j7-6FE" id="W66-En-40K"/>
-                        <segue destination="wBd-7w-LaH" kind="show" identifier="detailSegue" id="QPW-Cu-7BF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20.625" y="83.450704225352112"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="WC3-sp-7On">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wBd-7w-LaH" customClass="SecondViewController" customModule="LogIn_HW2_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wBd-7w-LaH" customClass="WelcomeViewController" customModule="LogIn_HW2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v6h-eC-8Jt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;username&gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyq-dl-drD">
-                                <rect key="frame" x="77.5" y="69" width="165" height="36"/>
+                                <rect key="frame" x="77.5" y="136" width="165" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhX-Ob-56C">
-                                <rect key="frame" x="119" y="438" width="100" height="42"/>
+                                <rect key="frame" x="119" y="431.5" width="82" height="42"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="wuy-6I-akj"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
@@ -121,9 +113,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiL-xl-qD5">
-                                <rect key="frame" x="104" y="123" width="112" height="126"/>
+                                <rect key="frame" x="112.5" y="212" width="95.5" height="95.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="JiL-xl-qD5" secondAttribute="height" multiplier="8:9" id="5cV-a5-9up"/>
+                                    <constraint firstAttribute="width" secondItem="JiL-xl-qD5" secondAttribute="height" multiplier="1:1" id="5cV-a5-9up"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <nil key="textColor"/>
@@ -133,15 +125,12 @@
                         <viewLayoutGuide key="safeArea" id="miP-QF-jgO"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wyq-dl-drD" firstAttribute="top" secondItem="miP-QF-jgO" secondAttribute="top" constant="69" id="CJa-q6-Gwx"/>
-                            <constraint firstItem="miP-QF-jgO" firstAttribute="trailing" secondItem="JiL-xl-qD5" secondAttribute="trailing" constant="104" id="LLp-bg-ZUB"/>
-                            <constraint firstItem="zhX-Ob-56C" firstAttribute="leading" secondItem="miP-QF-jgO" secondAttribute="leading" constant="119" id="OLW-uX-gIc"/>
-                            <constraint firstItem="miP-QF-jgO" firstAttribute="bottom" secondItem="zhX-Ob-56C" secondAttribute="bottom" constant="88" id="bia-9g-lDL"/>
-                            <constraint firstItem="zhX-Ob-56C" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JiL-xl-qD5" secondAttribute="bottom" constant="123" id="cQ1-iD-kjd"/>
-                            <constraint firstItem="JiL-xl-qD5" firstAttribute="leading" secondItem="miP-QF-jgO" secondAttribute="leading" constant="104" id="dAc-f8-QOk"/>
+                            <constraint firstItem="JiL-xl-qD5" firstAttribute="centerX" secondItem="miP-QF-jgO" secondAttribute="centerX" id="Fob-7o-imm"/>
+                            <constraint firstItem="zhX-Ob-56C" firstAttribute="centerX" secondItem="miP-QF-jgO" secondAttribute="centerX" id="NGH-8h-8PV"/>
+                            <constraint firstItem="miP-QF-jgO" firstAttribute="bottom" secondItem="Wyq-dl-drD" secondAttribute="bottom" multiplier="3.3" id="Q3S-jR-gHr"/>
+                            <constraint firstItem="miP-QF-jgO" firstAttribute="bottom" secondItem="zhX-Ob-56C" secondAttribute="bottom" multiplier="1.2" id="bia-9g-lDL"/>
                             <constraint firstItem="Wyq-dl-drD" firstAttribute="centerX" secondItem="v6h-eC-8Jt" secondAttribute="centerX" id="eF7-wa-6S6"/>
-                            <constraint firstItem="miP-QF-jgO" firstAttribute="trailing" secondItem="zhX-Ob-56C" secondAttribute="trailing" constant="101" id="fOx-PH-q0g"/>
-                            <constraint firstItem="JiL-xl-qD5" firstAttribute="top" secondItem="Wyq-dl-drD" secondAttribute="bottom" constant="18" id="xHS-l3-yW3"/>
+                            <constraint firstItem="JiL-xl-qD5" firstAttribute="top" secondItem="Wyq-dl-drD" secondAttribute="bottom" constant="40" id="xHS-l3-yW3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Bg-Wk-xV2"/>

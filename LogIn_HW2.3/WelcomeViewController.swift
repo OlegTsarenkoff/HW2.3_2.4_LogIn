@@ -7,13 +7,13 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
     
     var userName: String?
-    let gradientLayer = CAGradientLayer()
+    private let gradientLayer = CAGradientLayer()
     
     
     override func viewDidLoad() {
