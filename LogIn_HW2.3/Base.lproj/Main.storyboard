@@ -26,24 +26,27 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4kG-TH-sXS"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k28-XH-Rcq">
                                                 <rect key="frame" x="0.0" y="54" width="260" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6ZB-Vo-5Hc"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVI-jL-cv0">
                                         <rect key="frame" x="0.0" y="103" width="260" height="42"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Log In">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                        <state key="normal" title="Log In"/>
                                         <connections>
-                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fk3-nZ-cvN"/>
-                                            <segue destination="wBd-7w-LaH" kind="presentation" modalPresentationStyle="fullScreen" id="aBi-tw-1bx"/>
+                                            <action selector="loginTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="S7a-fZ-F68"/>
+                                            <segue destination="wBd-7w-LaH" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="wne-lW-JEb"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pS1-Wf-RKu" userLabel="Forget Stack View">
@@ -54,15 +57,15 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Forgot User Name?"/>
                                                 <connections>
-                                                    <action selector="forgotUserNameTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbA-AL-j75"/>
+                                                    <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NoO-uL-1J3"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBm-dD-2Sv">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBm-dD-2Sv">
                                                 <rect key="frame" x="140" y="0.0" width="120" height="28"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Forgot Password?"/>
                                                 <connections>
-                                                    <action selector="forgotPasswordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y8w-Ap-Ecq"/>
+                                                    <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="USv-3b-Tqm"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -79,9 +82,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logInButton" destination="kVI-jL-cv0" id="uWD-aq-Q3o"/>
-                        <outlet property="passwordTF" destination="k28-XH-Rcq" id="nWB-qD-dkJ"/>
-                        <outlet property="userNameTF" destination="8at-j7-6FE" id="W66-En-40K"/>
+                        <outlet property="passwordTF" destination="k28-XH-Rcq" id="FSb-fL-sd1"/>
+                        <outlet property="userNameTF" destination="8at-j7-6FE" id="THa-GJ-vIX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -104,11 +106,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhX-Ob-56C">
                                 <rect key="frame" x="119" y="431.5" width="82" height="42"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
-                                    <action selector="logOutTapped:" destination="wBd-7w-LaH" eventType="touchUpInside" id="VFE-x3-ig6"/>
                                     <segue destination="pJ4-mx-Jpe" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="Omm-dI-zQM"/>
                                 </connections>
                             </button>
@@ -126,7 +126,7 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JiL-xl-qD5" firstAttribute="centerX" secondItem="miP-QF-jgO" secondAttribute="centerX" id="Fob-7o-imm"/>
-                            <constraint firstItem="zhX-Ob-56C" firstAttribute="centerX" secondItem="miP-QF-jgO" secondAttribute="centerX" id="NGH-8h-8PV"/>
+                            <constraint firstItem="zhX-Ob-56C" firstAttribute="centerX" secondItem="v6h-eC-8Jt" secondAttribute="centerX" id="JGL-hs-Rae"/>
                             <constraint firstItem="miP-QF-jgO" firstAttribute="bottom" secondItem="Wyq-dl-drD" secondAttribute="bottom" multiplier="3.3" id="Q3S-jR-gHr"/>
                             <constraint firstItem="miP-QF-jgO" firstAttribute="bottom" secondItem="zhX-Ob-56C" secondAttribute="bottom" multiplier="1.2" id="bia-9g-lDL"/>
                             <constraint firstItem="Wyq-dl-drD" firstAttribute="centerX" secondItem="v6h-eC-8Jt" secondAttribute="centerX" id="eF7-wa-6S6"/>
@@ -135,8 +135,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Bg-Wk-xV2"/>
                     <connections>
-                        <outlet property="logOutButton" destination="zhX-Ob-56C" id="XWJ-dg-Q5G"/>
-                        <outlet property="userNameLabel" destination="Wyq-dl-drD" id="vUG-If-upa"/>
+                        <outlet property="userNameLabel" destination="Wyq-dl-drD" id="8Io-hV-jZm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7H-wF-pWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,9 +147,6 @@
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

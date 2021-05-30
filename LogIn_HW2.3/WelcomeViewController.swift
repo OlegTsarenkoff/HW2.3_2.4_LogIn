@@ -9,27 +9,27 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    // MARK: - IB Outlets
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var logOutButton: UIButton!
     
-    var userName: String?
-    private let gradientLayer = CAGradientLayer()
-    
+    var userName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addVerticalGradientLayer()
         
-        logOutButton.layer.cornerRadius = 20
-        
-        guard let userName = self.userName else { return }
         userNameLabel.text = "Welcome, \(userName)!"
-        
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor.yellow.cgColor, UIColor.white.cgColor]
-        
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    // MARK: IBActions
     @IBAction func logOutTapped(_ sender: Any) {
+    }
+    
+    // MARK: Set backgroung color
+    func addVerticalGradientLayer() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [UIColor.yellow.cgColor, UIColor.white.cgColor]
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
