@@ -9,7 +9,6 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    // MARK: - IB Outlets
     @IBOutlet weak var userNameLabel: UILabel!
     
     var userName = ""
@@ -21,11 +20,9 @@ class WelcomeViewController: UIViewController {
         userNameLabel.text = "Welcome, \(userName)!"
     }
     
-    // MARK: IBActions
     @IBAction func logOutTapped(_ sender: Any) {
     }
     
-    // MARK: Set backgroung color
     func addVerticalGradientLayer() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds

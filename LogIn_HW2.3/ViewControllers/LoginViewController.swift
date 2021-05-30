@@ -9,21 +9,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // MARK: - IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    // MARK: - Private properties
     private let login = "User"
     private let password = "Password"
     
-    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = login
     }
     
-    // MARK: IBActions
     @IBAction func loginTapped() {
         if userNameTF.text != login || passwordTF.text != password {
             showAlert(
@@ -41,13 +37,13 @@ class LoginViewController: UIViewController {
             : showAlert(title: "Oops!", message: "Your password is \(password) 🙈")
     }
     
+    
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
     }
 }
 
-// MARK: - Alert Controller
 extension LoginViewController {
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -59,7 +55,6 @@ extension LoginViewController {
     }
 }
 
-// MARK: - Private Methods
 extension LoginViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
