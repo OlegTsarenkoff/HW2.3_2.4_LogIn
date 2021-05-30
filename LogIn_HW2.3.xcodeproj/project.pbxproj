@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2405F4B92663BBD200A8EDFD /* backgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405F4B82663BBD200A8EDFD /* backgroundGradient.swift */; };
+		2405F4BB2663CA1300A8EDFD /* UserProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405F4BA2663CA1300A8EDFD /* UserProfileData.swift */; };
+		2405F4BD2663E98400A8EDFD /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405F4BC2663E98400A8EDFD /* AboutMeViewController.swift */; };
+		2405F4C62663FE5800A8EDFD /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405F4C52663FE5800A8EDFD /* MoreViewController.swift */; };
+		2405F4C82664085B00A8EDFD /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405F4C72664085B00A8EDFD /* MoreInfoViewController.swift */; };
 		2409442E265D586E00C3EF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409442D265D586E00C3EF2B /* AppDelegate.swift */; };
 		24094430265D586E00C3EF2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2409442F265D586E00C3EF2B /* SceneDelegate.swift */; };
 		24094432265D586E00C3EF2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24094431265D586E00C3EF2B /* LoginViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2405F4B82663BBD200A8EDFD /* backgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundGradient.swift; sourceTree = "<group>"; };
+		2405F4BA2663CA1300A8EDFD /* UserProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileData.swift; sourceTree = "<group>"; };
+		2405F4BC2663E98400A8EDFD /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		2405F4C52663FE5800A8EDFD /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		2405F4C72664085B00A8EDFD /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		2409442A265D586E00C3EF2B /* LogIn_HW2.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogIn_HW2.3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2409442D265D586E00C3EF2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2409442F265D586E00C3EF2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +71,9 @@
 			children = (
 				24094431265D586E00C3EF2B /* LoginViewController.swift */,
 				24094441265D85F400C3EF2B /* WelcomeViewController.swift */,
+				2405F4BC2663E98400A8EDFD /* AboutMeViewController.swift */,
+				2405F4C52663FE5800A8EDFD /* MoreViewController.swift */,
+				2405F4C72664085B00A8EDFD /* MoreInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -68,6 +81,8 @@
 		2405F49126637D6F00A8EDFD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2405F4BA2663CA1300A8EDFD /* UserProfileData.swift */,
+				2405F4B82663BBD200A8EDFD /* backgroundGradient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,8 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2405F4BB2663CA1300A8EDFD /* UserProfileData.swift in Sources */,
 				24094442265D85F600C3EF2B /* WelcomeViewController.swift in Sources */,
+				2405F4BD2663E98400A8EDFD /* AboutMeViewController.swift in Sources */,
 				24094432265D586E00C3EF2B /* LoginViewController.swift in Sources */,
+				2405F4B92663BBD200A8EDFD /* backgroundGradient.swift in Sources */,
+				2405F4C62663FE5800A8EDFD /* MoreViewController.swift in Sources */,
+				2405F4C82664085B00A8EDFD /* MoreInfoViewController.swift in Sources */,
 				2409442E265D586E00C3EF2B /* AppDelegate.swift in Sources */,
 				24094430265D586E00C3EF2B /* SceneDelegate.swift in Sources */,
 			);

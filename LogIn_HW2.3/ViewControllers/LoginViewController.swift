@@ -12,14 +12,21 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let login = "User"
-    private let password = "Password"
-    
+    private let login = UserData().login
+    private let password = UserData().password
+
+//Есть сомнения в необходимости данного кода, т.к. на WelcomeVC подтягиваю инфу из UserProfileData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = login
+        let tabBarController = segue.destination as! UITabBarController
+        
+        for viewController in tabBarController.viewControllers! {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = UserData().firstName
+            }
+        }
+        
     }
-    
+
     @IBAction func loginTapped() {
         if userNameTF.text != login || passwordTF.text != password {
             showAlert(
@@ -36,7 +43,6 @@ class LoginViewController: UIViewController {
             ? showAlert(title: "Oops!", message: "Your name is \(login) 🤠")
             : showAlert(title: "Oops!", message: "Your password is \(password) 🙈")
     }
-    
     
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
         userNameTF.text = ""
@@ -66,7 +72,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordTF.becomeFirstResponder()
         } else {
             loginTapped()
-            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+            performSegue(withIdentifier: "showWelcomeViewController", sender: nil)
         }
         return true
     }

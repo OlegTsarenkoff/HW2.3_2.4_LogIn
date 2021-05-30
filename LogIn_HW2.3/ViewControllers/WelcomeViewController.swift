@@ -15,18 +15,12 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addVerticalGradientLayer()
-        
-        userNameLabel.text = "Welcome, \(userName)!"
+        userNameLabel.text = "Добро пожаловать, \(userName)!"
+        view.addVerticalGradientLayer(topColor: UIColor.yellow, bottomColor: UIColor.white)
     }
     
     @IBAction func logOutTapped(_ sender: Any) {
     }
     
-    func addVerticalGradientLayer() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [UIColor.yellow.cgColor, UIColor.white.cgColor]
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-    }
+    
 }
