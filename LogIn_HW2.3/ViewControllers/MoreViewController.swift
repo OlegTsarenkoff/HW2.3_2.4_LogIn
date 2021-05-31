@@ -10,6 +10,6 @@ import UIKit
 class MoreViewController: UIViewController {
     
     override func viewDidLoad() {
-        view.addVerticalGradientLayer(topColor: UIColor.systemGreen, bottomColor: UIColor.white)
+        view.addVerticalGradientLayer(topColor: UIColor.white, bottomColor: UIColor.brown)
     }
 }

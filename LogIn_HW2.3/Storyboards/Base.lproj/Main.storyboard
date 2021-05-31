@@ -222,6 +222,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="до 2010"/>
                                         <connections>
+                                            <action selector="bio:" destination="taU-Xq-joO" eventType="touchUpInside" id="jg5-OS-UTZ"/>
+                                            <action selector="firstBio:" destination="taU-Xq-joO" eventType="touchUpInside" id="YAw-MY-T8h"/>
+                                            <action selector="oneBio:" destination="taU-Xq-joO" eventType="touchUpInside" id="dBY-Ae-hnS"/>
                                             <segue destination="SyG-Ew-4p4" kind="show" id="wMG-gY-hkA"/>
                                         </connections>
                                     </button>
@@ -230,7 +233,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="до 2015"/>
                                         <connections>
-                                            <segue destination="IL2-NL-ePc" kind="show" id="EOC-pR-jbD"/>
+                                            <action selector="twoBio:" destination="taU-Xq-joO" eventType="touchUpInside" id="Kbz-9F-Gue"/>
+                                            <segue destination="SyG-Ew-4p4" kind="show" id="E7h-hx-alp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeE-I0-wij">
@@ -238,7 +242,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="до 2020"/>
                                         <connections>
-                                            <segue destination="ck8-Iy-GvQ" kind="show" id="how-36-tlJ"/>
+                                            <action selector="threeBio:" destination="taU-Xq-joO" eventType="touchUpInside" id="Vlh-1W-CsS"/>
+                                            <segue destination="SyG-Ew-4p4" kind="show" id="Xui-hk-Qr3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjC-jf-sm8">
@@ -246,7 +251,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="сейчас"/>
                                         <connections>
-                                            <segue destination="Xco-kI-JA5" kind="show" id="5s3-2J-8g1"/>
+                                            <action selector="fourBio:" destination="taU-Xq-joO" eventType="touchUpInside" id="lmL-1X-VCw"/>
+                                            <segue destination="SyG-Ew-4p4" kind="show" id="q5E-zH-Djb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -263,56 +269,9 @@
                     <navigationItem key="navigationItem" id="L3G-0Y-xyy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FaT-D2-QlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="taU-Xq-joO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2396" y="618"/>
-        </scene>
-        <!--More Info View Controller-->
-        <scene sceneID="HGn-gb-S3Y">
-            <objects>
-                <viewController id="IL2-NL-ePc" customClass="MoreInfoViewController" customModule="LogIn_HW2_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dOg-ee-X7I">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="5UY-fK-UQd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="G4R-ci-WXq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ted-G8-CXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1941" y="1422"/>
-        </scene>
-        <!--More Info View Controller-->
-        <scene sceneID="uY0-yC-6Sh">
-            <objects>
-                <viewController id="ck8-Iy-GvQ" customClass="MoreInfoViewController" customModule="LogIn_HW2_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aEp-nJ-D9r">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ep4-r6-ysC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="L1e-7o-v2w"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Gx-cm-Gd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2946" y="1422"/>
-        </scene>
-        <!--More Info View Controller-->
-        <scene sceneID="zus-If-VVH">
-            <objects>
-                <viewController id="Xco-kI-JA5" customClass="MoreInfoViewController" customModule="LogIn_HW2_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gG7-E5-zDv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="tAt-dR-KPd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="aMq-5F-kdA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XT8-VZ-66q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3878" y="1422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5pw-Ii-lUn">
@@ -360,16 +319,45 @@
                     <view key="view" contentMode="scaleToFill" id="v8N-el-Kh6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="stM-pH-OEG">
+                                <rect key="frame" x="20" y="54" width="280" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="stM-pH-OEG" secondAttribute="height" multiplier="7:5" id="a2U-at-Jjc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jI7-Re-YLx">
+                                <rect key="frame" x="20" y="304" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="r6p-0Y-GKG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="stM-pH-OEG" firstAttribute="leading" secondItem="r6p-0Y-GKG" secondAttribute="leading" constant="20" id="0Pi-HM-v9P"/>
+                            <constraint firstItem="stM-pH-OEG" firstAttribute="top" secondItem="r6p-0Y-GKG" secondAttribute="top" constant="10" id="EhJ-Bs-Xad"/>
+                            <constraint firstItem="r6p-0Y-GKG" firstAttribute="trailing" secondItem="stM-pH-OEG" secondAttribute="trailing" constant="20" id="OhE-2U-XNj"/>
+                            <constraint firstItem="jI7-Re-YLx" firstAttribute="leading" secondItem="stM-pH-OEG" secondAttribute="leading" id="Rza-be-IKp"/>
+                            <constraint firstItem="jI7-Re-YLx" firstAttribute="top" secondItem="stM-pH-OEG" secondAttribute="bottom" constant="50" id="hs8-IC-GAH"/>
+                            <constraint firstItem="jI7-Re-YLx" firstAttribute="trailing" secondItem="stM-pH-OEG" secondAttribute="trailing" id="nTs-vn-EKf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mZu-Ub-W43"/>
+                    <connections>
+                        <outlet property="biography" destination="jI7-Re-YLx" id="pxl-h8-Jnu"/>
+                        <outlet property="imageBio" destination="stM-pH-OEG" id="26G-Oy-zlb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSV-lH-rPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="947" y="1422"/>
+            <point key="canvasLocation" x="3210" y="618"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wMG-gY-hkA"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>

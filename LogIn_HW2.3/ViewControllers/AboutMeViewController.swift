@@ -16,6 +16,7 @@ class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: UIColor.orange, bottomColor: UIColor.white)
+        
         userImage.image = UIImage(named: "imageOleg")
         userName.text = "Имя пользователя: \(UserData().firstName) \(UserData().lastName)"
         birthdayUser.text = "Дата рождения: \(UserData().bigthdayUser)"
